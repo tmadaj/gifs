@@ -4,10 +4,13 @@
   "description": "",
   "author": "Tomas Madaj",
   "license": "ISC",
-  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "files": [
     "dist/index.*"
   ],
+  "main": "dist/index.js",
   "scripts": {
     "start": "rollup -c -w --configDev --configServe",
     "build": "rollup -c --configProd",
