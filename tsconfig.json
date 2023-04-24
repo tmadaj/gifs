@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSourceMap": false,
+    "isolatedModules": false,
+    "jsx": "react-jsx",
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es6"
+  },
+  "include": ["src"]
+}
