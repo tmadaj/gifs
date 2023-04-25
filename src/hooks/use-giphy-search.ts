@@ -3,22 +3,23 @@ import { useCallback, useState } from 'react';
 import { IGiphyResult, IGiphyPagination } from '../types';
 
 export interface ISearchParams {
-  q: string;
-  offset?: number;
   limit?: number;
+  offset?: number;
+  q: string;
 }
 
 const URL = 'api.giphy.com/v1/gifs/search';
 
 export default function useGiphySearch() {
   const [data, setData] = useState<IGiphyResult[]>([]);
-  const [pagination, setPagination] = useState<IGiphyPagination>();
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error>();
+  const [loading, setLoading] = useState(false);
+  const [pagination, setPagination] = useState<IGiphyPagination>();
 
-  const search = useCallback(async ({ q, limit = 10, offset = 0 }: ISearchParams) => {
+  const search = useCallback(async ({ limit = 10, offset = 0, q }: ISearchParams) => {
     setError(undefined);
     setLoading(true);
+
     try {
       const response = await fetch(
         `https://${URL}?api_key=${process.env.GIPHY_API_KEY}&q=${q}&limit=${limit}&offset=${offset}`
