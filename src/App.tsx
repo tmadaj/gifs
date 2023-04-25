@@ -1,3 +1,5 @@
+import Search from './pages/Search';
+
 export default function App() {
-  return <h1>W</h1>;
+  return <Search />;
 }
