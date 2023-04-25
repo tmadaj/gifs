@@ -7,16 +7,13 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "files": [
-    "dist/index.*"
-  ],
   "main": "dist/index.js",
   "scripts": {
     "start": "rollup -c -w --configDev --configServe",
     "build": "rollup -c --configProd",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint:fix": "eslint ./src --ext .ts,.tsx --fix",
     "lint:ts": "tsc --noEmit"
   },
   "dependencies": {
@@ -29,6 +26,7 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@types/node": "^18.16.0",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
@@ -46,7 +44,6 @@
     "prettier": "^2.8.8",
     "rollup": "^3.21.0",
     "rollup-plugin-serve": "^2.0.2",
-    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^5.0.4"
   }
 }

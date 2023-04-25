@@ -2,9 +2,9 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 import dotenv from 'dotenv';
 import serve from 'rollup-plugin-serve';
-import typescript from 'rollup-plugin-typescript2';
 
 import packageJson from './package.json' assert { type: 'json' };
 
